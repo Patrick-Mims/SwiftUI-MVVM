@@ -1,10 +1,8 @@
-//
-//  ContentView.swift
-//  Beauty
-//
-//  Created by JPL-ST-SPRING2022 on 11/18/22.
-//
-
+/*
+    Date: 11.18.22
+    Name: Beauty
+    Purpose: A Dating App
+ */
 import SwiftUI
 
 struct ContentView: View {

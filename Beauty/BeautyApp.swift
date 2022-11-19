@@ -1,9 +1,6 @@
-//
-//  BeautyApp.swift
-//  Beauty
-//
-//  Created by JPL-ST-SPRING2022 on 11/18/22.
-//
+/*
+     BeautyApp.swift
+ */
 
 import SwiftUI
 
