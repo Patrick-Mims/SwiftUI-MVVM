@@ -2,8 +2,8 @@
 import Foundation
 
 class DateViewModel: ObservableObject {
-    @Published var dateData: [Models.DateModel]
-    @Published var orderData: [Models.OrderModel]
+    @Published var dateData: [DateModel]
+    @Published var orderData: [OrderModel]
     
     init() {
         dateData = [

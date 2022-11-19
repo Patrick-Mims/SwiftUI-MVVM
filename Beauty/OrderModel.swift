@@ -3,6 +3,6 @@ import Foundation
 
 struct OrderModel: Identifiable {
     var id = UUID()
-    var Item: Model
+    var profile: DateModel
     var unit: Int
 }
