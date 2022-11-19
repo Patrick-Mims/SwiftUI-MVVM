@@ -6,25 +6,25 @@ class DateViewModel: ObservableObject {
     @Published var orderData: [OrderModel]
     init() {
         dateData = [
-            dateData(
+            DateModel(
                 age: "25",
                 name: "Anne",
                 photo: "anne",
                 profile: "Today is my birthday, with me Hapy Birthday!"
             ),
-            dateData(
+            DateModel(
                 age: "35",
                 name: "Sarah",
                 photo: "sarah",
                 profile: "Yesterday, I went to the mall."
             ),
-            dateData(
+            DateModel(
                 age: "45",
                 name: "Kim",
                 photo: "kim",
                 profile: "My only clean shirt is in the laundry"
             ),
-            dateData(
+            DateModel(
                 age: "55",
                 name: "Jessica",
                 photo: "jessica",
