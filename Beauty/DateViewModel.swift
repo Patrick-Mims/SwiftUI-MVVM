@@ -4,7 +4,6 @@ import Foundation
 class DateViewModel: ObservableObject {
     @Published var dateData: [DateModel]
     @Published var orderData: [OrderModel]
-   /*
     init() {
         dateData = [
             dateData(
@@ -34,5 +33,4 @@ class DateViewModel: ObservableObject {
         ]
         orderData = []
     }
-    */
 }
