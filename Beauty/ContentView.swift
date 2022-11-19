@@ -7,7 +7,6 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @EnvironmentObject var appData: DateViewModel
     
     var body: some View {
         Text("Hello, world!")
