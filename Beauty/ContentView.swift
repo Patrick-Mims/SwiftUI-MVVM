@@ -6,6 +6,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var appData: ViewModel
+    
     var body: some View {
         Text("Hello, world!")
             .padding()

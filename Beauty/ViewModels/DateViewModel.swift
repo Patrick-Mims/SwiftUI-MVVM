@@ -1,6 +1,5 @@
-// ViewModel
+// DateViewModel
 import Foundation
-
 
 class DateViewModel: ObservableObject {
     @Published var dateData: [Models.DateModel]
