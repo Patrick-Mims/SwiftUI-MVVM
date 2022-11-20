@@ -1,9 +1,15 @@
 import SwiftUI
 
 struct ProfileView: View {
-    
-    @EnvironmentObject var appData: DateViewModel
-    
+    /*
+     * @EnvironmentObject property wrapper. This lets us share model data anywhere it’s needed,
+     * while also ensuring that our views automatically stay updated when that data changes.
+     * */
+     @EnvironmentObject var appData: DateViewModel
+    /*
+     *    SwiftUI uses the @State property wrapper to allow us to modify values inside a struct,
+     *    which would normally not be allowed because structs are value types.
+     * */
     @State var dateItem: DateModel
     @State private var unitStr = "1"
     
@@ -11,10 +17,4 @@ struct ProfileView: View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
-/*
-struct ProfileView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProfileView()
-    }
-}
-*/
+/
