@@ -2,12 +2,11 @@
 import Foundation
 
 class DateViewModel: ObservableObject {
-    
-    @Published var dateData: [DateModel]
+    @Published var profileModel : [ProfileModel]
     
     init() {
-        dateData = [
-            DateModel(age: 25, name: "Anne", photo: "anne", profile: "Today is my birthday, with me Hapy Birthday!")
+        profileModel = [
+            ProfileModel(age: 25, name: "Anne", photo: "anne", profile: "Today is my birthday, with me Hapy Birthday!")
         ]
     }
 }
