@@ -7,12 +7,48 @@ struct ProfileView: View {
     @State private var unitStr = "1"
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            VStack{
+                Image(dateItem.photo)
+                    .resizable()
+                    .frame(width: 300, height: 200, alignment: .center)
+                    .scaledToFill()
+                Text(dateItem.name)
+                    .font(.title)
+                    .foregroundColor(.orange)
+                Text(dateItem.age)
+                    .font(.caption)
+                    .frame(width: 300)
+                    .padding(.top, 10)
+                HStack{
+                    Text("Quantity:")
+                        .padding(.trailing, 10)
+                    TextField("1", text: $unitStr)
+                }
+                .frame(width: 300)
+                .padding()
+                HStack{
+                    Button("Add This Dish") {
+                        let unit = Int(unitStr)!
+                        let orderItem = OrderModel(dateItem: dateItem, unit: unit)
+                        appData.OrderData.append(orderItem)
+                        appData.calculateTotalPayment()
+                        print(appData.totalPayment)
+                    }
+                    NavigationLink {
+                        ReceiptView()
+                    } label: {
+                        Label("Check Out", systemImage: "cart")
+                            .buttonStyle(.borderedProminent)
+                    }
+                }
+                Spacer()
+            }
+        }
     }
-}
 
 /*  @EnvironmentObject
- *  @EnvironmentObject property wrapper. This lets us share model data anywhere it’s needed,
+ *  @EnvironmentObject property wrapper. This lets us share model data anywhere it's needed,
  w  while also ensuring that our views automatically stay updated when that data changes.
  
  *  @State

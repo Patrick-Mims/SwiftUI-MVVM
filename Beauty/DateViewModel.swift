@@ -2,10 +2,6 @@
 import Foundation
 
 class DateViewModel: ObservableObject {
-    /*  @Published is one of the most useful property wrappers in SwiftUI,
-     *  allowing us to create observable objects that automatically announce
-     *  when changes occur.
-     * */
     
     @Published var dateData: [DateModel]
     
@@ -15,3 +11,8 @@ class DateViewModel: ObservableObject {
         ]
     }
 }
+
+/*  @Published is one of the most useful property wrappers in SwiftUI,
+ *  allowing us to create observable objects that automatically announce
+ *  when changes occur.
+ * */
